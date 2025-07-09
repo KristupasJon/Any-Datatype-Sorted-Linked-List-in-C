@@ -8,25 +8,25 @@ struct node
     struct node *link;
 };
 
-/*Function createHead initialises the very first node for the list.*/
+/*Function initialises the very first node for the list.*/
 struct node* createHead(void *value, int size);
-/*Function appendToEnd is designed to add a node to the very end of the list only.*/
+/*Function is designed to add a node to the very end of the list only.*/
 struct node* appendToEnd(struct node *head, void *data, int size);
-/*Function insertAndSortNewNode inserts newly created node and links it in the correct place of the list to keep the list sorted.*/
+/*Function inserts newly created node and links it in the correct place of the list to keep the list sorted.*/
 struct node* insertAndSortNewNode(struct node *head, void *key, int size, int func_type(void*, void*));
-/*printList function calls for the specific data type print function and continues to the next node.*/
+/*Function calls for the specific data type print function and continues to the next node.*/
 void printList(struct node *head, void func_type(void* ));
-/*free_list function frees the memory taken up by the list and destroys it.*/
+/*Function frees the memory taken up by the list and destroys it.*/
 void free_list(struct node *head);
-/*function to delete a selected node from the list.*/
+/*Function to delete a selected node from the list.*/
 struct node* deleteNode(struct node* head, int number);
-/*function returns int value of the amount of nodes that exist in the list.*/
+/*Function returns int value of the amount of nodes that exist in the list.*/
 int findNodeCount(struct node* head);
-/*function returns an int value within the node.*/
+/*Function returns an int value within the node.*/
 int int_tellValueAtNode(struct node* head, int number);
-/*function inserts a chosen value to any selected node*/
+/*Function inserts a chosen value to any selected node*/
 struct node* InsertNewValueToNode(struct node *head, void *value, int number);
-/*function deletes a value from the node*/
+/*Function deletes a value from the node*/
 struct node* deleteValueAtNode(struct node *head, int number);
 /*Print functions which are called by the main printList function depending on data type.*/
 void print_int_type(void *adr);
